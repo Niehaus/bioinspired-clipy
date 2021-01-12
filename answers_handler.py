@@ -1,8 +1,8 @@
 from pprint import pprint
-from algoritmos.colonia_formigas.ant_colony import AntColony
+from algoritmos.colonia_formigas.ant_colony_runner import AntColony
 from algoritmos.ag.ag_b import AGb
 from algoritmos.ag.ag_r import AGr
-from algoritmos.pso.pso import PSO
+from algoritmos.pso.pso_runner import PSO
 
 
 class Handler:
