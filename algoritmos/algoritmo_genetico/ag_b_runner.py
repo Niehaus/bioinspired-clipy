@@ -3,4 +3,4 @@ class AGb:
         ...
 
     def run(self):
-        print('Running the AGb')
+        print('Running AGb')

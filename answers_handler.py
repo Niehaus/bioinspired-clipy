@@ -1,7 +1,6 @@
-from pprint import pprint
+from algoritmos.algoritmo_genetico.ag_b_runner import AGb
+from algoritmos.algoritmo_genetico.ag_r_runner import AGr
 from algoritmos.colonia_formigas.ant_colony_runner import AntColony
-from algoritmos.ag.ag_b import AGb
-from algoritmos.ag.ag_r import AGr
 from algoritmos.pso.pso_runner import PSO
 
 
@@ -25,3 +24,4 @@ class Handler:
             executioner.run()
         elif self.action == 'Acesso ao Código':
             print('')
+

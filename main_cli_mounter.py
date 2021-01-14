@@ -47,6 +47,8 @@ def action_choices(answers):
             'Link2: ...'
         ]
         return choices
+    elif answers['action'] == 'Sair':
+        raise SystemExit
     return choices
 
 
@@ -59,7 +61,8 @@ question = [
             'Executar Algoritmo',
             Separator('= Extras ='),
             'Algoritmo Genetico Interativo',
-            'Dicas para Gráficos e Análises'
+            'Dicas para Gráficos e Análises',
+            'Sair'
         ]
     },
     {
@@ -75,8 +78,9 @@ print(f'[bold blue]'
       f'{bioinspirados_text}'
       f'[/bold blue]')
 try:
-    answers = prompt(question, style=style)
-    handle_answers = Handler(answers)
-    handle_answers.handle_which()
+    while True:
+        answers = prompt(question, style=style)
+        handle_answers = Handler(answers)
+        handle_answers.handle_which()
 except KeyError:
     print('Ocorreu algum problema...tente executar novamente!')

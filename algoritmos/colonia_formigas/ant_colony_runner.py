@@ -1,7 +1,8 @@
-
-from ..colonia_formigas.ant_alg import AntSystemAlg, Ant
 from rich import print
 from rich.panel import Panel
+
+from ..colonia_formigas.ant_alg import AntSystemAlg, Ant
+
 
 def read_file(filepath):
     global data
@@ -58,12 +59,9 @@ class AntColony:
         ant_system.clear_pheromone_matrix()
         optimum, solution = ant_system.get_best_solution()
 
-
         dados_resultados = {
             'num_cidades': data['city_number'],
             'optimum': optimum,
             'solution': solution
         }
         AntColony.nice_print(**dados_resultados)
-
-
